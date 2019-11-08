@@ -13,6 +13,9 @@ using WpfUtil.Data;
 
 namespace WpfUtil.Behaviors
 {
+    /// <summary>
+    /// ListBoxコントロールでDeleteキーが押下された際に、項目を削除する機能
+    /// </summary>
     public class ListBoxDeleteKey : Behavior<ListBox>
     {
         protected override void OnAttached()

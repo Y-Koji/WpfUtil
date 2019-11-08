@@ -7,6 +7,7 @@
         xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
         xmlns:local="clr-namespace:WpfTest"
         xmlns:uBehavior="clr-namespace:WpfUtil.Behaviors;assembly=WpfUtil"
+        xmlns:uCmd="clr-namespace:WpfUtil.Commands;assembly=WpfUtil"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
 
@@ -21,6 +22,21 @@
                 <uBehavior:ListBoxDeleteKey />
             </i:Interaction.Behaviors>
         </ListBox>
-        <Button Width="100" Height="30" Content="Add" Command="{Binding AddItemCommand}" />
+        <StackPanel Width="100">
+            <Button Width="100" Height="30" Content="ListBoxにItem追加" Command="{Binding AddItemCommand}" />
+            <Button Content="FILE" Width="100">
+                <Button.Command>
+                    <uCmd:OpenFileCommand />
+                </Button.Command>
+            </Button>
+            <Button Content="MsgBox">
+                <Button.Command>
+                    <uCmd:MsgBoxCommand />
+                </Button.Command>
+                <Button.CommandParameter>
+                    <uCmd:MsgBoxCommandParameter Text="Message Here!" />
+                </Button.CommandParameter>
+            </Button>
+        </StackPanel>
     </Grid>
 </Window>

@@ -49,6 +49,11 @@
     <Compile Include="Behaviors\ListBoxDeleteKey.cs" />
     <Compile Include="Behaviors\DragDrop.cs" />
     <Compile Include="Commands\ActionCommand.cs" />
+    <Compile Include="Commands\CommandConstant.cs" />
+    <Compile Include="Commands\MsgBoxCommand.cs" />
+    <Compile Include="Commands\MsgBoxCommandParameter.cs" />
+    <Compile Include="Commands\OpenFileAfterCommandBase.cs" />
+    <Compile Include="Commands\OpenFileCommand.cs" />
     <Compile Include="Data\INotifyCollection.cs" />
     <Compile Include="Data\Json.cs" />
     <Compile Include="Data\NotifyCollection.cs" />
